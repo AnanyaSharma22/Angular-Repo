@@ -1,0 +1,49 @@
+<div class="login-outer">
+  <div class="col-md-12">
+      <div class="row">
+          <!-- <img src="../../../assets/images/logo.png" alt="angular 6 official" title="angular 6 official" /> -->
+          <h2>Welcome!
+              <span>Sign In to Property Selling Website</span>
+          </h2>
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+              <div class="login-form-inner">
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <span class="email">
+                          <input type="email" id="email" placeholder="Enter Your Email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"/>
+                          <!-- <img src="../../../assets/images/email-icon.svg" alt="Email" title="Email" /> -->
+                      </span>
+                      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                          <div *ngIf="f.email.errors.required">Email is required</div>
+                          <div *ngIf="f.email.invalid">Email must be a valid email address</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Password</label>
+                      <span class="pswd">
+                          <input type="password" id="password" placeholder="Enter Your Password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+                          <!-- <img src="../../../assets/images/pswd-icon.svg" alt="Email" title="Email" /> -->
+                      </span>
+                      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                          <div *ngIf="f.password.errors.required">Password is required</div>
+                          <div *ngIf="f.password.errors.pattern">Password must be valid.</div>
+                      </div>
+                  </div>
+              </div>
+                  <div class="form-group">
+                      <span class="remember-check">
+                          <input type="checkbox" id="remember" />
+                          <span class="checkbox"></span>
+                          <label for="remember">Remember Me</label>
+                      </span>
+                      <a class="forgt-link" href="javascript:void(0);" title="Forgot Password?">Forgot Password?</a>
+                  </div>
+              <div class="form-group">
+                  <button [disabled]="loading" class="btn-login">Login</button>
+                  <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
+                  />
+              </div>
+          </form>
+      </div>
+  </div>
+</div>

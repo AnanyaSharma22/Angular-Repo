@@ -1,0 +1,135 @@
+<app-header></app-header>
+<div class="heading-container">
+
+    <h1>
+        <!-- <img src="assets/images/companies-icon.png" alt="{{heading}}" title="{{heading}}" />
+        <a href="javascript:void(0);" (click)="goBack()" class="pull-left back-btn">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i> Back
+        </a>{{heading}} -->
+        <!--People -->
+        Property Tab
+    </h1>
+    <!-- <a class="filter-icon" href="javascript:void(0);">
+        <img alt="filter" src="assets/images/icFilter.svg" />
+    </a> -->
+    <a class="orange-Btn" >
+        <span>+</span> Add Property
+    </a>
+
+
+</div>
+
+<div class="white-bg projects-listing">
+    <div class="table-container">
+        <div class="search-container">
+
+            <!-- <form id="searchForm" method="post" [formGroup]="searchForm" novalidate (ngSubmit)="getPeopleSearch(searchForm.value, searchForm.valid)">
+                <div class="col-sm-6">
+                    <div class="search-textbox">
+                        <input id='name' class="form-control serach-textbox" formControlName="name" type="text"
+                            placeholder="Search" (keyup)="isSearch()" (change)="isSearch()" />
+                        <div [hidden]="searchForm.controls.name.valid || (searchForm.controls.name.pristine )" class="alert alert-danger">
+                            <span *ngIf="searchForm.controls.name.errors?.required">
+                                Please enter search term.
+                            </span>
+                            <span *ngIf="searchForm.controls.name.errors?.minlength">
+                                Search term must have at least 3 characters.
+                            </span>
+                        </div>
+                        <span (click)="getPeopleSearch(searchForm.value, searchForm.valid)" class="search-icon">
+                            <img src="assets/images/icSearch.svg" width="13" height="13" alt="search">
+                        </span>
+                    </div>
+                    <button type="reset" class="reset" [ngClass]="{showReset : showReset==true }" (click)="clearSearch()"
+                        routerLink="/employees"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+                </div>
+            </form> -->
+            <!-- <span class="search-icon">
+                <img src="assets/images/icSearch.svg" width="13" height="13" alt="search">
+            </span> -->
+        </div>
+        <div class="c-table-responsive clearfix">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Cost</th>
+                        <th>Specification</th>
+                        <th>Location</th>
+                        <th>Property Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let property of properties">
+                        <td>{{property.description}} </td>
+                        <td>{{property.cost}}</td>
+                        <td>{{property.specifictions}}</td>
+                        <td>{{property.location}}</td>
+                        <td>{{property.property_type}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div *ngIf="noRecord" style="text-align: center; font-size: 22px; text-decoration: underline; padding-bottom: 25px;">No
+        Record Found</div>
+</div>
+
+
+<!-- <div (click)="closeEdit()" class="edit-overlay" [ngClass]="{'show-edit':editOverlay}"></div>
+<div class="edit-overlay-inner" [ngClass]="{'show-edit':editOverlay}">
+    <a (click)="closeEdit()" class="close-btn" href="javascript:void(0);" title="Close">
+        <img src="../../assets/images/close-btn.jpg" alt="Close" title="Close" />
+    </a>
+    <div class="employee-img">
+        <figure>
+            <img src="{{employeeDetail?.profileImageSrc ? employeeDetail?.profileImageSrc : '../../../assets/images/employee-img.jpg'}}"
+                alt="{{employeeDetail| userName}}" title="{{employeeDetail| userName}}" />
+        </figure>
+        <span class="name">{{employeeDetail| userName}}</span>
+    </div>
+    <h3>Contact Details</h3>
+    <div class="edit-row">
+        <span class="label">Contact Number</span>
+        <span class="detail">{{employeeDetail?.profile?.contact_number}}</span>
+    </div>
+    <div class="edit-row">
+        <span class="label">Email Address</span>
+        <span class="detail">{{employeeDetail?.email}}</span>
+    </div>
+    <div class="edit-row last-text">
+        <span class="label">Skype Address</span>
+        <span class="detail">{{employeeDetail?.profile?.skype_id}}</span>
+    </div>
+    <h3>Work Information</h3>
+    <div class="edit-row">
+        <span class="label">Employee ID</span>
+        <span class="detail">{{employeeDetail?.profile?.employee_id}}</span>
+    </div>
+
+    <div class="edit-row">
+        <span class="label">Functional Area</span>
+        <span class="detail">{{employeeDetail?.profile?.functional_area |functionalAreaPipe}}</span>
+    </div>
+    <div class="edit-row">
+        <span class="label">Designation</span>
+        <span class="detail">{{employeeDetail?.designation|designationPipe}}</span>
+    </div>
+    <div class="edit-row last-text">
+        <span class="label">Date of Joining</span>
+        <span class="detail">{{employeeDetail?.date_joined |stringToDate |date : 'd MMMM y'}}</span> -->
+        <!-- <span class="detail">23 February 2018</span> -->
+    <!-- </div>
+    <h3>Personal Information</h3>
+    <div class="edit-row">
+        <span class="label">Gender</span>
+        <span class="detail">{{employeeDetail?.profile?.gender | genderPipe}}</span>
+    </div>
+    <div class="edit-row last-text">
+        <span class="label">Date of Birth</span>
+        <span class="detail">{{employeeDetail?.profile?.dob | stringToDate | date: 'd MMMM'}}</span> -->
+        <!-- <span class="detail">24th February</span> -->
+    <!-- </div> -->
+
+<!-- </div> -->
+<!-- <pagination-controls (pageChange)="pageChanged($event)" autoHide="true"></pagination-controls> -->

@@ -1,0 +1,166 @@
+.login-outer{
+    width: 490px;
+    margin:130px auto 0;
+  }
+  
+  h2{
+    float: left;
+    width: 100%;
+    color: #484948;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 90px 0 30px;
+  }
+  
+  h2 span{
+    font-weight: 400;
+  }
+  
+  .login-form-inner{
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 37px 0 #e5e7f2;
+    margin-bottom: 30px;
+  }
+  
+  .form-group{
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  .login-form-inner label{
+    float: left;
+    width: 100%;
+    color: #767c88;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .login-form-inner input{
+    border: 0;
+    box-shadow: none;
+    color: #a7adb4;
+    font-size: 16px;
+    font-weight: 400;
+    float: left;
+    padding: 0;
+    width: 90%;
+  }
+  
+  .login-form-inner img{
+    float: right;
+    margin-top: -5px;
+  }
+  .login-form-inner .email img{
+    margin-top: 0;
+  }
+  
+  .login-form-inner .form-group{
+    padding: 22px 20px;
+    border-bottom: 1px solid #f3f3f3;
+  }
+  
+  .login-form-inner .form-group:last-child{
+    border-bottom: 0;
+  }
+  
+  .forgt-link{
+    float: right;
+    width: auto;
+    color: #52b2eb;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .forgt-link:hover{
+    color: #52b2eb;
+    text-decoration: underline;
+  }
+  
+  .remember-check{
+    float: left;
+    width: auto;
+  }
+  
+  .remember-check .checkbox{
+    margin: 0 10px 0 0;
+    float: left;
+    border: solid 0.8px #e1e1e1;
+    background: #fff;
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    position: relative;
+  }
+  
+  .remember-check input{
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    top: 0;
+    opacity: 0;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    z-index: 9;
+  }
+  
+  .remember-check label{
+    font-weight: 400;
+    color: #767c88;
+    font-size: 14px;
+    float: left;
+    line-height: 15px;
+    margin: 4px 0 0;
+    cursor: pointer;
+  }
+  .remember-check input:checked ~ .checkbox{
+    background-color: #cc5142;
+  }
+  
+  .remember-check input:checked ~ .checkbox:after{
+    left: 7px;
+    top: 5px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    content: '';
+  }
+  
+  .btn-login{
+    float: left;
+    background-color: #484948;
+    box-shadow: 0 5px 18px 0 rgba(249, 134, 120, 0.68);
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 45px;
+    padding: 16px 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .btn-login:hover{
+    background-color: #b3473a;
+  }
+  
+  .invalid-feedback{
+    float: left;
+    width: 90%;
+    color: #cc5142;
+    font-size: 12px;
+    border-top: 1px solid #cc5142;
+    padding-top: 2px;
+  }
